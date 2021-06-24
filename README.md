@@ -1,5 +1,9 @@
 ## Usage
 
+```
+npm run demo #run demo
+npm run demo:debug #run demo with debug mode
+```
 
 ## Reference
 
