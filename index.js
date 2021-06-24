@@ -156,18 +156,15 @@ const main = async () => {
         // await qldbKVS.getValues([DOC_OBJECT_KEY1, DOC_OBJECT_KEY2]);
 
         //Get meta data
-        const metadata = await qldbKVS.getMetadata(DOC_OBJECT_KEY2);
+        // const metadata = await qldbKVS.getMetadata(DOC_OBJECT_KEY2);
         // await qldbKVS.getMetaDataByDocumentIdAndTxId(responses[0].documentId, responses[0].txId)
 
         //Verify metadata
         // await qldbKVS.verifyLedgerMetadata(metadata)
 
         //Get history
-        // await qldbKVS.getHistory(DOC_OBJECT_KEY1)
+        await qldbKVS.getHistory(DOC_OBJECT_KEY1)
 
-        //Get document revision
-        // const documentRevision = await qldbKVS.getDocumentRevisionByLedgerMetadata(metadata)
-        // await qldbKVS.verifyDocumentRevisionHash(documentRevision)
     } catch (e) {
         console.error(e)
     }
