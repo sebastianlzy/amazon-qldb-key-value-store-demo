@@ -1,0 +1,48 @@
+{
+  "dependencies": {
+    "@types/node": "^12.0.2",
+    "amazon-qldb-driver-nodejs": "2.2.0",
+    "aws-sdk": "^2.653.0",
+    "ion-js": "~4.0.0",
+    "jsbi": "^3.1.1",
+    "log4js": "^3.0.6"
+  },
+  "name": "amazon-qldb-kvs-nodejs",
+  "description": "A helper module, simplifying basic interactions with Amazon Quantum Ledger Database for Node.js through a simple key-value store interface.",
+  "version": "0.6.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.6.0",
+    "@typescript-eslint/parser": "^2.6.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "jest": "^26.4.2",
+    "ts-node": "^8.3.0",
+    "typedoc": "^0.20.25",
+    "typescript": "^3.5.3"
+  },
+  "scripts": {
+    "build": "npm run lint && tsc",
+    "doc": "typedoc --out docs ./src",
+    "lint": "./node_modules/.bin/eslint ./src/**/*.ts",
+    "test": "npm run build && jest --runInBand"
+  },
+  "author": {
+    "name": "Amazon Web Services",
+    "url": "https://aws.amazon.com/"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aws-samples/amazon-qldb-kvs-nodejs"
+  },
+  "keywords": [
+    "amazon",
+    "aws",
+    "qldb",
+    "ledger"
+  ]
+}

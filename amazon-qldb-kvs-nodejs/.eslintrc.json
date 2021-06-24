@@ -1,0 +1,44 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript",
+        "plugin:sonarjs/recommended"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module",
+        "project": "./tsconfig.json",
+        "jsx": false // True for React
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "no-unused-vars": "off",
+        "no-prototype-builtins": "off",
+        "no-empty": "off",
+        "no-constant-condition": [
+            "error", { "checkLoops": false }
+        ],
+        "require-atomic-updates": "off",
+        "@typescript-eslint/no-inferrable-types": [
+            2,
+            {
+              "ignoreParameters": true
+            }
+        ],
+        "sonarjs/cognitive-complexity": ["error", 24]
+    }
+}
